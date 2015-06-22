@@ -780,9 +780,9 @@ console.log("Running Apos Bot!");
                     if(allPossibleFood[i].size < 11)
                         continue;
                      if (canSplit(allPossibleFood[i], player[0])) {
-                        drawCircle(allPossibleFood[i].x, allPossibleFood[i].y, allPossibleFood[i].size + 0, 0);
+                        drawCircle(allPossibleFood[i].x, allPossibleFood[i].y, allPossibleFood[i].size + 10, 0);
                     } else {
-                        drawCircle(allPossibleFood[i].x, allPossibleFood[i].y, allPossibleFood[i].size + 0, 3);
+                        drawCircle(allPossibleFood[i].x, allPossibleFood[i].y, allPossibleFood[i].size + 10, 3);
                     }
                  }
 
