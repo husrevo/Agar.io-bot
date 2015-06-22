@@ -195,7 +195,13 @@ console.log("Running Apos Bot!");
             }
 
             for (var i = 0; i < player.length; i++) {
-                if (!isMe && !interNodes[element].d && compareSize(interNodes[element], player[i], 1.30) || (interNodes[element].size <= 11)) {
+                if (!isMe && !interNodes[element].d && compareSize(interNodes[element], player[i], 2.30) ) {
+                    drawCircle(interNodes[element].x, interNodes[element].y, interNodes[element].size + 10, 3);
+                    return true;
+                } else if((interNodes[element].size <= 11)) {
+                    return true;    
+                }else if (!isMe && !interNodes[element].d && compareSize(interNodes[element], player[i], 1.30)) {
+                    drawCircle(interNodes[element].x, interNodes[element].y, interNodes[element].size + 10, 0);
                     return true;
                 } else {
                     return false;
