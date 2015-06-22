@@ -96,7 +96,7 @@ console.log("Running Apos Bot!");
     }
 
     function canSplit(player1, player2) {
-        return compareSize(player1, player2, 2.30) && !compareSize(player1, player2, 9);
+        return compareSize(player1, player2, 2.45) && !compareSize(player1, player2, 9);
     }
 
     function processEverything(listToUse) {
@@ -166,9 +166,9 @@ console.log("Running Apos Bot!");
             }
 
             for (var i = 0; i < player.length; i++) {
-                if (!isMe && (!interNodes[element].d && compareSize(player[i], interNodes[element], 1.30))) {
+                if (!isMe && (!interNodes[element].d && compareSize(player[i], interNodes[element], 1.23))) {
                     return true;
-                } else if (interNodes[element].d && compareSize(interNodes[element], player[i], 1.30)) {
+                } else if (interNodes[element].d && compareSize(interNodes[element], player[i], 1.23)) {
                     return true;
                 }
                 return false;
@@ -195,7 +195,7 @@ console.log("Running Apos Bot!");
             }
 
             for (var i = 0; i < player.length; i++) {
-                if (!isMe && !interNodes[element].d && compareSize(interNodes[element], player[i], 1.30) << (interNodes[element].size <= 11)) {
+                if (!isMe && !interNodes[element].d && compareSize(interNodes[element], player[i], 1.27) << (interNodes[element].size <= 11)) {
                     return true;
                 } else {
                     return false;
@@ -774,7 +774,7 @@ console.log("Running Apos Bot!");
                 
                  for (var i = 0; i < allPossibleFood.length; i++) {
                      if(allPossibleFood[i][2] <= 11) {
-                     } else if (allPossibleFood[i][2]*allPossibleFood[i][2]*2.30 < player[0].size*player[0].size) {
+                     } else if (allPossibleFood[i][2]*allPossibleFood[i][2]*2.51 < player[0].size*player[0].size) {
                         drawCircle(allPossibleFood[i][0], allPossibleFood[i][1], allPossibleFood[i][2]/2, 7);
                     } else {
                         drawCircle(allPossibleFood[i][0], allPossibleFood[i][1], allPossibleFood[i][2]/2, 8);
