@@ -196,12 +196,10 @@ console.log("Running Apos Bot!");
 
             for (var i = 0; i < player.length; i++) {
                 if (!isMe && !interNodes[element].d && compareSize(interNodes[element], player[i], 2.30) ) {
-                    drawCircle(interNodes[element].x, interNodes[element].y, interNodes[element].size + 10, 3);
                     return true;
                 } else if((interNodes[element].size <= 11)) {
                     return true;    
                 }else if (!isMe && !interNodes[element].d && compareSize(interNodes[element], player[i], 1.30)) {
-                    drawCircle(interNodes[element].x, interNodes[element].y, interNodes[element].size + 10, 0);
                     return true;
                 } else {
                     return false;
@@ -777,6 +775,16 @@ console.log("Running Apos Bot!");
 
                 var isSafeSpot = true;
                 var isMouseSafe = true;
+                
+                 for (var i = 0; i < allPossibleFood.length; i++) {
+                    if(allPossibleFood[i].size < 11)
+                        continue;
+                     if (canSplit(allPossibleFood[i], player[0])) {
+                        drawCircle(allPossibleFood[i].x, allPossibleFood[i].y, allPossibleFood[i].size + 0, 0);
+                    } else {
+                        drawCircle(allPossibleFood[i].x, allPossibleFood[i].y, allPossibleFood[i].size + 0, 3);
+                    }
+                 }
 
                 var clusterAllFood = clusterFood(allPossibleFood, player[0].size);
 
